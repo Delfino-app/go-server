@@ -7,12 +7,11 @@ import (
 )
 
 func formHandle(w http.ResponseWriter, r *http.Request) {
-
 	if err := r.ParseForm(); err != nil {
 		fmt.Fprintf(w, "ParseForm() err: %v", err)
 		return
 	}
-	fmt.Fprintf(w, "POST request successfull\n")
+	fmt.Fprintf(w, "POST request successfull \n")
 
 	name := r.FormValue("name")
 	address := r.FormValue("address")
